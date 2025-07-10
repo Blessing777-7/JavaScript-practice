@@ -6,7 +6,19 @@
   <body>
     <h1 id="heading" onclick="changeText()">JavaScript</h1>
     <p id="addition"></p>
-  
+    <p>Switch statement</p>
+    <label for="weather">What is the weather like?</label>
+    <select id="weather">
+        <option value="sunny">Sunny</option>
+        <option value="windy">Windy</option>
+        <option value="rainy">Rainy</option>
+        <option value="snowy">Snowy</option>
+        <option value="cloudy">Cloudy</option>
+     </select>
+     <a href="#" onclick="btnPressed()">GO!</a>
+    <p id="outputText">Weather advice:</p>
+      
+      
     <script>
       function changeText(){
         if(document.getElementById("heading").innerHTML=='JavaSript'){
@@ -19,6 +31,27 @@
       addNumbers(5,7)
       function addNumbers(num1, num2){
         document.getElementById("addition").innerHTML= num1 + num2;
+      }
+      function btnPressed(){
+        var weatherSelected = document.getElementById("weather").value;
+        var advice;
+        switch(weatherSelected){
+      case "sunny":
+          advice = "Wear your Sunglasses";
+          break;
+       case "windy":
+          advice = "Wear a jacket";
+          break;    
+      case "rainy":
+          advice = "Wear a rain coat and carry an umbrella";
+          break;   
+      case "snowy":
+          advice = "Dress warmly";
+          break;    
+       case "cloudy":
+          advice = "Carry a jacket. It might rain";
+          break;           
+        }
       }
     </script>
   </body>
