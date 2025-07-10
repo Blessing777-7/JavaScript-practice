@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
-  
   <body>
-    <h1 id="headng 1"></h1>
-    <p id="paragraph 1"></p>
-
+    <h1 id="heading 1" onclick="changeText()">JavaScript</h1>
+    <p id="addition"></p>
+  
     <script>
-      document.getElementById("heading 1").innerHTML=("This is JavaScript.");
-      document.getElementById("paragraph 1").innerHTML=("5+6");
+      function changeText(){
+        if(document.getElementById("heading 1").innerHTML=='JavaSript'){
+          document.getElementById("heading 1").innerHTML='Is awesome'
+       }else{
+          document.getElementById("heading 1").innerHTML='JavaScript'
+        }
+
+      addNumbers(5,7)
+      function addNumbers(num1, num2){
+        document.getElementById("addition").innerHTML= num1 + num2;
+      }
     </script>
   </body>
 </html>
